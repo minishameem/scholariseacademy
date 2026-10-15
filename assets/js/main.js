@@ -4,14 +4,14 @@
 
   /* ---------- Settings you can edit ---------- */
   // Add the WhatsApp number here later, digits only with country code, e.g. '8801XXXXXXXXX'
-  var WHATSAPP_NUMBER = '';
-  var CONTACT_EMAIL = 'contact.scholariseacademy@gmail.com';
+  var WHATSAPP_NUMBER = '8801338055356';
+  var CONTACT_EMAIL = 'contact.scholarise@gmail.com';
 
   var doc = document.documentElement;
   var $ = function (s, r) { return (r || document).querySelector(s); };
   var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
 
-  /* ---------- Clean URLs (/aboutus/) also work when opened from disk ---------- */
+  /* ---------- Clean URLs (/about/) also work when opened from disk ---------- */
   if (location.protocol === 'file:') {
     $$('a[href]').forEach(function (a) {
       var h = a.getAttribute('href');
@@ -56,7 +56,7 @@
         el.classList.add('is-in');
         io.unobserve(el);
         // hand the element back to its own hover transitions once it has arrived
-        setTimeout(function () { el.removeAttribute('data-reveal'); el.style.removeProperty('--d'); }, 1400);
+        setTimeout(function () { el.removeAttribute('data-reveal'); el.style.removeProperty('--d'); }, 2000);
       });
     }, { threshold: 0.14, rootMargin: '0px 0px -40px 0px' });
     revealTargets.forEach(function (el) { io.observe(el); });
@@ -153,8 +153,46 @@
     });
   }
 
+  /* ---------- Count-up numbers (Teaching Impact) ---------- */
+  var counters = $$('[data-count]');
+  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (counters.length && 'IntersectionObserver' in window && !reduceMotion) {
+    var fmt = function (n) { return n.toLocaleString('en-US'); };
+    var cio = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        var el = en.target, end = +el.getAttribute('data-count'), suf = el.getAttribute('data-suffix') || '', t0 = null;
+        cio.unobserve(el);
+        (function step(t) {
+          if (t0 === null) t0 = t;
+          var p = Math.min(1, (t - t0) / 1600), e = 1 - Math.pow(1 - p, 3);
+          el.textContent = fmt(Math.round(end * e)) + suf;
+          if (p < 1) requestAnimationFrame(step);
+        })(performance.now());
+      });
+    }, { threshold: 0.6 });
+    counters.forEach(function (el) { cio.observe(el); });
+  }
+
+  /* ---------- Section menus: arrows jump to the start / end ---------- */
+  $$('.pp-jump').forEach(function (bar) {
+    var list = $('ul', bar), prev = $('.jump-arrow.prev', bar), next = $('.jump-arrow.next', bar);
+    if (!list || !prev || !next) return;
+    function update() {
+      var max = list.scrollWidth - list.clientWidth;
+      bar.classList.toggle('no-overflow', max <= 2);
+      prev.disabled = list.scrollLeft <= 2;
+      next.disabled = list.scrollLeft >= max - 2;
+    }
+    prev.addEventListener('click', function () { list.scrollTo({ left: 0, behavior: 'smooth' }); });
+    next.addEventListener('click', function () { list.scrollTo({ left: list.scrollWidth, behavior: 'smooth' }); });
+    list.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+    update();
+  });
+
   /* ---------- Terms: highlight current section in the contents list ---------- */
-  var tocLinks = $$('.toc a');
+  var tocLinks = $$('.toc a, .pp-jump a');
   if (tocLinks.length && 'IntersectionObserver' in window) {
     var tmap = {};
     tocLinks.forEach(function (a) { tmap[a.getAttribute('href').slice(1)] = a; });
@@ -162,9 +200,55 @@
       entries.forEach(function (en) {
         if (!en.isIntersecting) return;
         tocLinks.forEach(function (l) { l.classList.remove('is-active'); });
-        var a = tmap[en.target.id]; a && a.classList.add('is-active');
+        var a = tmap[en.target.id];
+        if (!a) return;
+        a.classList.add('is-active');
+        var ul = a.closest('.pp-jump ul');
+        if (ul) {
+          var l = a.offsetLeft - ul.offsetLeft, r = l + a.offsetWidth;
+          if (l < ul.scrollLeft + 24 || r > ul.scrollLeft + ul.clientWidth - 24) ul.scrollTo({ left: l - 40, behavior: 'smooth' });
+        }
       });
     }, { rootMargin: '-30% 0px -60% 0px' });
     Object.keys(tmap).forEach(function (id) { var s = document.getElementById(id); s && tio.observe(s); });
   }
+  /* ---------- Back to top (sits above the WhatsApp button on every page) ---------- */
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  var topBtn = document.createElement('button');
+  topBtn.type = 'button';
+  topBtn.className = 'to-top';
+  topBtn.setAttribute('aria-label', 'Back to top');
+  topBtn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5"/><path d="M5.5 11.5 12 5l6.5 6.5"/></svg><span class="to-top-tip">Back to top</span>';
+  document.body.appendChild(topBtn);
+  var topTicking = false;
+  var syncTop = function () {
+    topTicking = false;
+    var show = window.scrollY > 360;
+    topBtn.classList.toggle('is-visible', show);
+    topBtn.tabIndex = show ? 0 : -1;
+  };
+  syncTop();
+  window.addEventListener('scroll', function () { if (!topTicking) { topTicking = true; requestAnimationFrame(syncTop); } }, { passive: true });
+  topBtn.addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: reduceMotion.matches ? 'auto' : 'smooth' });
+    var first = $('.site-header a');
+    if (first) first.focus({ preventScroll: true });
+  });
+
+  /* ---------- FAQ accordion: one open at a time (the height animation is pure CSS) ---------- */
+  var faqItems = $$('.faq-item');
+  var setFaq = function (item, open) {
+    item.classList.toggle('is-open', open);
+    var btn = $('.faq-btn', item);
+    if (btn) btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  };
+  faqItems.forEach(function (item) {
+    var btn = $('.faq-btn', item);
+    if (!btn) return;
+    btn.addEventListener('click', function () {
+      var open = !item.classList.contains('is-open');
+      if (open) faqItems.forEach(function (o) { if (o !== item) setFaq(o, false); });
+      setFaq(item, open);
+    });
+  });
 })();

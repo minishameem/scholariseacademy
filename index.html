@@ -6,7 +6,12 @@
   <title>Scholarise Academy | English Learning for Young Learners</title>
   <meta name="description" content="Scholarise Academy. We don’t just teach English. We build the ability to think in English.">
   <meta name="theme-color" content="#035643">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/icons/icon-192.png">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/home-compact.css">
   <script>document.documentElement.classList.add('js')</script>
 </head>
 <body class="page-home">
@@ -16,8 +21,8 @@
     <a class="logo" href="#home" aria-label="Scholarise Academy home"><img src="assets/images/scholarise-logo.png" alt="Scholarise Academy" width="182" height="44"></a>
     <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span></button>
     <nav class="main-nav" id="main-nav" aria-label="Main navigation">
-      <ul><li><a href="#home" data-spy="home" class="is-active" aria-current="page">Home</a></li><li><a href="#why-scholarise" data-spy="why-scholarise">Why Scholarise</a></li><li><a href="#how-we-teach" data-spy="how-we-teach">How We Teach</a></li><li><a href="#courses" data-spy="courses">Courses</a></li><li><a href="contactus/">Contact</a></li></ul>
-      <a href="contactus/" class="btn btn-primary">Enroll Now</a>
+      <ul><li><a href="#home" data-spy="home" class="is-active" aria-current="page">Home</a></li><li><a href="why-scholarise/">Why Scholarise</a></li><li><a href="how-we-teach/">How We Teach</a></li><li><a href="#courses" data-spy="courses">Courses</a></li><li><a href="library/">Library</a></li><li><a href="blogs/">Blogs</a></li><li><a href="contact/">Contact</a></li><li><a href="about/">About</a></li></ul>
+      <a href="enroll/" class="btn btn-primary">Enroll Now</a>
     </nav>
   </div>
 </header>
@@ -79,23 +84,15 @@
   <div class="container">
     <h2 class="philosophy-eyebrow" data-reveal>OUR TEACHING PHILOSOPHY</h2>
     <div class="philosophy-body">
-      <div data-reveal="left"><div class="philosophy-media">
-      <img class="philosophy-img" src="assets/images/philosophy-learner.png" alt="A young boy writing in his notebook at a classroom desk" width="564" height="586">
-      <svg class="phil-bulb" viewBox="0 0 109 114" aria-hidden="true">
-        <g fill="none" stroke="#FDB50E" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M57 26 a28 28 0 0 0 -16.5 50.5 c3 2.5 5 5.4 5 9 v4 h23 v-4 c0-3.6 2-6.5 5-9 a28 28 0 0 0 -16.5 -50.5 z"/>
-          <path d="M47 97 h20 M50 104 h14 M53 111 h8"/>
-          <path d="M50 88 v-16 l7 6 l7 -6 v16"/>
-          <path d="M57 3 v12 M30 11 l6 9 M84 11 l-6 9 M11 30 l10 5 M103 30 l-10 5 M4 56 h12 M93 56 h12"/>
-        </g>
-      </svg>
-      <svg class="phil-sparks" viewBox="0 0 43 58" aria-hidden="true">
-        <g fill="none" stroke="#349C5C" stroke-width="4.5" stroke-linecap="round">
-          <path d="M16 4 L 5 20 M36 22 L 12 36 M40 53 L 18 53"/>
-        </g>
-      </svg>
-      <svg class="phil-tri" viewBox="0 0 21 12" aria-hidden="true"><path d="M0 1 L 21 0 L 13 12 Z" fill="#349C5C"/></svg>
-    </div></div>
+      <div class="phil-reveal" data-reveal="left"><div class="philosophy-media phil-collage">
+        <span class="phil-backdrop" aria-hidden="true"></span>
+        <span class="phil-dots" aria-hidden="true"></span>
+        <span class="phil-sun" aria-hidden="true"></span>
+        <figure class="phil-tile t1"><picture><source type="image/webp" srcset="assets/images/philosophy-group-480.webp 480w, assets/images/philosophy-group-900.webp 900w" sizes="(max-width: 640px) 46vw, 260px"><img src="assets/images/philosophy-group-480.jpg" srcset="assets/images/philosophy-group-480.jpg 480w, assets/images/philosophy-group-900.jpg 900w" sizes="(max-width: 640px) 46vw, 260px" width="480" height="320" loading="lazy" decoding="async" style="object-position:56% 50%" alt="Three learners working together at a table, writing and talking about their work"></picture></figure>
+        <figure class="phil-tile t2"><picture><source type="image/webp" srcset="assets/images/philosophy-reading-480.webp 480w, assets/images/philosophy-reading-900.webp 900w" sizes="(max-width: 640px) 46vw, 260px"><img src="assets/images/philosophy-reading-480.jpg" srcset="assets/images/philosophy-reading-480.jpg 480w, assets/images/philosophy-reading-900.jpg 900w" sizes="(max-width: 640px) 46vw, 260px" width="480" height="320" loading="lazy" decoding="async" style="object-position:36% 45%" alt="A learner smiling while reading a storybook in a cosy reading corner"></picture></figure>
+        <figure class="phil-tile t3"><picture><source type="image/webp" srcset="assets/images/philosophy-speaking-480.webp 480w, assets/images/philosophy-speaking-900.webp 900w" sizes="(max-width: 640px) 46vw, 260px"><img src="assets/images/philosophy-speaking-480.jpg" srcset="assets/images/philosophy-speaking-480.jpg 480w, assets/images/philosophy-speaking-900.jpg 900w" sizes="(max-width: 640px) 46vw, 260px" width="480" height="320" loading="lazy" decoding="async" style="object-position:40% 40%" alt="A learner sharing her ideas with a classmate during a speaking activity"></picture></figure>
+        <figure class="phil-tile t4"><picture><source type="image/webp" srcset="assets/images/philosophy-writing-480.webp 480w, assets/images/philosophy-writing-900.webp 900w" sizes="(max-width: 640px) 46vw, 260px"><img src="assets/images/philosophy-writing-480.jpg" srcset="assets/images/philosophy-writing-480.jpg 480w, assets/images/philosophy-writing-900.jpg 900w" sizes="(max-width: 640px) 46vw, 260px" width="480" height="320" loading="lazy" decoding="async" style="object-position:55% 45%" alt="A learner concentrating while completing a writing task in his workbook"></picture></figure>
+      </div></div>
       <div class="philosophy-copy" data-reveal="right">
         <h3 class="philosophy-title">Learning Should Be<br> Something Learners<br> Want to <span class="accent">Come Back To.</span></h3>
         <p>At Scholarise, we believe learning should not be built around<br class="d"> <strong>fear, boredom, pressure, or the constant feeling of “I have<br class="d"> to study.”</strong></p>
@@ -122,20 +119,18 @@
   </div>
 </section>
 
-<section class="believe" id="how-we-teach">
+<section class="believe" id="what-we-believe">
   <div class="container">
     <div class="section-head" data-reveal>
-      <svg class="title-spark left" viewBox="0 0 38 48" aria-hidden="true"><g fill="none" stroke="#349C5C" stroke-width="3.5" stroke-linecap="round"><path d="M26 3 L 32 16 M5 15 L 18 23 M2 41 L 17 40"/></g></svg><svg class="title-spark right" viewBox="0 0 38 48" aria-hidden="true"><g fill="none" stroke="#349C5C" stroke-width="3.5" stroke-linecap="round"><path d="M12 3 L 6 16 M33 15 L 20 23 M36 41 L 21 40"/></g></svg>
+      
       <h2 class="believe-title">What We Believe</h2>
       <p class="believe-sub">These core beliefs guide everything we do at Scholarise.<br> They shape the way we design, teach, and support every learning experience.</p>
     </div>
-    <div class="belief-grid" data-stagger="90">
+    <div class="belief-grid">
       <article data-reveal class="belief-card green c1">
         <div class="card-icon">
           <svg class="ico" viewBox="0 0 48 48"><g fill="none" stroke="#035643" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M24 7a12 12 0 0 0-7 21.8c1.4 1 2.1 2.4 2.1 4V35h9.8v-2.2c0-1.6.7-3 2.1-4A12 12 0 0 0 24 7z"/><path d="M19.5 40h9 M21.5 44h5"/></g></svg>
-          <svg class="rays" viewBox="0 0 44 36"><g fill="none" stroke="#F8BD25" stroke-width="3" stroke-linecap="round"><path d="M4 10 L 6 3 M14 14 L 20 8 M18 24 L 26 22"/></g></svg>
         </div>
-        <svg class="deco sparks-dark" style="left:41.61%;top:4px;width:28px;height:32px" viewBox="0 0 28 32"><g fill="none" stroke="#035643" stroke-width="3" stroke-linecap="round"><path d="M4 2 L 2 12 M20 8 L 10 17 M26 26 L 14 28"/></g></svg>
         <h3>Joy Is Not the Opposite<br> of Serious Learning</h3>
         <span class="card-bar"></span>
         <p>Learning can be rigorous without<br class="d"> being intimidating. We believe a<br class="d"> classroom can be intellectually<br class="d"> meaningful, playful, warm, energetic,<br class="d"> and enjoyable.</p>
@@ -144,7 +139,6 @@
       <article data-reveal class="belief-card cream c2">
         <div class="card-icon">
           <svg class="ico" viewBox="0 0 48 48"><g fill="none" stroke="#035643" stroke-linecap="round" stroke-linejoin="round"><circle cx="20" cy="20" r="12" stroke-width="3.4"/><path d="M29 29 L 39 39" stroke-width="5"/></g></svg>
-          <svg class="rays" viewBox="0 0 44 36"><g fill="none" stroke="#F8BD25" stroke-width="3" stroke-linecap="round"><path d="M6 12 L 11 5 M12 18 L 20 16 M13 25 L 20 25"/></g></svg>
         </div>
         <svg class="deco" style="left:76.45%;top:26px;width:34px;height:53px" viewBox="0 0 34 53"><path d="M30 3 C 30 20, 22 34, 10 38 C 2 40, 2 30, 10 30 C 18 30, 16 44, 4 50" fill="none" stroke="#035643" stroke-width="2.2" stroke-linecap="round"/></svg>
         <h3>Curiosity Comes<br> Before Compliance</h3>
@@ -154,9 +148,7 @@
       <article data-reveal class="belief-card green c3">
         <div class="card-icon">
           <svg class="ico" viewBox="0 0 48 48"><g fill="none" stroke="#035643" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="15" r="8"/><path d="M10 42v-4a14 14 0 0 1 28 0v4z"/></g></svg>
-          <svg class="rays" viewBox="0 0 44 36"><g fill="none" stroke="#F8BD25" stroke-width="3" stroke-linecap="round"><path d="M-6 8 L -2 14 M6 2 L 5 10 M16 6 L 12 13 M24 14 L 16 17"/></g></svg>
         </div>
-        <svg class="deco" style="left:67.42%;top:64px;width:28px;height:30px" viewBox="0 0 28 30"><g fill="none" stroke="#035643" stroke-width="3" stroke-linecap="round"><path d="M3 2 L 5 12 M12 6 L 12 16 M24 18 L 16 22"/></g></svg>
         <h3>The Learner Is Not<br> a Passive Receiver</h3>
         <span class="card-bar"></span>
         <p>A learner should not simply sit,<br class="d"> listen, memorise, and reproduce.<br class="d"> They should have opportunities to<br class="d"> <strong>think, make choices, express ideas,<br class="d"> make connections, experiment with<br class="d"> language, and learn from mistakes.</strong></p>
@@ -165,7 +157,6 @@
       <article data-reveal class="belief-card cream c4">
         <div class="card-icon">
           <svg class="ico" viewBox="0 0 48 48"><g fill="none" stroke="#035643" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 17h20a8 8 0 0 1 7.8 6.2l2.2 10a5 5 0 0 1-8.8 4.2L32 33H16l-3.2 4.4A5 5 0 0 1 4 33.2l2.2-10A8 8 0 0 1 14 17z"/><path d="M24 17v-6 M15 22.5v7 M11.5 26h7"/></g><g fill="#F8BD25"><circle cx="32" cy="23.5" r="1.9"/><circle cx="35.5" cy="27" r="1.9"/><circle cx="32" cy="30.5" r="1.9"/><circle cx="28.5" cy="27" r="1.9"/></g></svg>
-          <svg class="rays" viewBox="0 0 44 36"><g fill="none" stroke="#F8BD25" stroke-width="3" stroke-linecap="round"><path d="M2 12 L 5 6 M8 15 L 14 7 M12 22 L 20 19"/></g></svg>
         </div>
         <svg class="deco" style="left:74.19%;top:39px;width:52px;height:42px" viewBox="0 0 52 42"><path d="M2 12 C 14 10, 24 20, 34 30 C 44 39, 50 34, 50 34 M26 22 C 20 12, 24 2, 30 4 C 36 6, 32 20, 26 22" fill="none" stroke="#035643" stroke-width="2.2" stroke-linecap="round"/></svg>
         <h3>Playfulness Can<br> Have Purpose</h3>
@@ -175,7 +166,6 @@
       <article data-reveal class="belief-card cream c5">
         <div class="card-icon">
           <svg class="ico" viewBox="0 0 48 48"><path d="M24 6.5l5.3 10.9 12 1.7-8.7 8.4 2.1 11.9L24 33.8l-10.7 5.6 2.1-11.9-8.7-8.4 12-1.7z" fill="none" stroke="#035643" stroke-width="3.4" stroke-linejoin="round"/></svg>
-          <svg class="rays" viewBox="0 0 44 36"><g fill="none" stroke="#F8BD25" stroke-width="3" stroke-linecap="round"><path d="M4 12 L 7 3 M10 16 L 16 9 M14 22 L 22 19"/></g></svg>
         </div>
         <svg class="deco" style="left:69.68%;top:25px;width:38px;height:36px" viewBox="0 0 38 36"><path d="M2 20 C 10 14, 18 12, 22 18 C 26 26, 18 34, 16 26 C 14 16, 24 4, 36 3" fill="none" stroke="#035643" stroke-width="2.2" stroke-linecap="round"/></svg>
         <h3>Interest Is a Pathway<br> to Deeper Learning</h3>
@@ -186,9 +176,7 @@
       <article data-reveal class="belief-card green c6">
         <div class="card-icon">
           <svg class="ico" viewBox="0 0 48 48"><path d="M24 5l15 5.5v11.5c0 10-6.5 17.5-15 21.5-8.5-4-15-11.5-15-21.5V10.5z" fill="none" stroke="#035643" stroke-width="3.4" stroke-linejoin="round"/><path d="M24 31.5c-6-4-8.5-7-8.5-10a4.3 4.3 0 0 1 8.5-1.5 4.3 4.3 0 0 1 8.5 1.5c0 3-2.5 6-8.5 10z" fill="#035643"/></svg>
-          <svg class="rays" viewBox="0 0 44 36"><g fill="none" stroke="#F8BD25" stroke-width="3" stroke-linecap="round"><path d="M2 6 L 9 4 M4 16 L 12 16 M4 26 L 11 29"/></g></svg>
         </div>
-        <svg class="deco" style="left:76.77%;top:53px;width:35px;height:40px" viewBox="0 0 35 40"><g fill="none" stroke="#035643" stroke-width="3" stroke-linecap="round"><path d="M4 2 L 2 13 M16 6 L 10 18 M32 30 L 20 26"/></g></svg>
         <h3>Psychological Safety<br> Comes Before Confident<br> Communication</h3>
         <span class="card-bar"></span>
         <p>A learner who is afraid of being<br class="d"> wrong will naturally hesitate to speak.<br class="d"> We want learners to understand<br class="d"> that mistakes are not signs of<br class="d"> failure—they are part of learning.</p>
@@ -198,7 +186,6 @@
         <div class="card-icon">
           <svg class="ico" viewBox="0 0 48 48"><g fill="none" stroke="#035643" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="30" width="7" height="12" rx="1.5"/><rect x="20.5" y="25" width="7" height="17" rx="1.5"/><rect x="33" y="19" width="7" height="23" rx="1.5"/><path d="M5 23 L 16 14 L 24 19 L 38 7 M31 7 H 38 V 14"/></g><path d="M9 12 L 12 7 L 15 12" fill="none" stroke="#F8BD25" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
-        <svg class="deco" style="left:45.81%;top:25px;width:22px;height:28px" viewBox="0 0 22 28"><g fill="none" stroke="#F8BD25" stroke-width="3" stroke-linecap="round"><path d="M12 2 L 4 14 M20 22 L 10 26"/></g></svg>
         <h3>Motivation Should<br> Grow From Within</h3>
         <span class="card-bar"></span>
         <p>We don’t want learning to depend<br class="d"> entirely on external pressure,<br class="d"> rewards, or the constant feeling<br class="d"> of “I have to study.”</p>
@@ -207,7 +194,6 @@
       <article data-reveal class="belief-card green c8">
         <div class="card-icon">
           <svg class="ico" viewBox="0 0 48 48"><g fill="none" stroke="#035643" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M24 43 V 23"/><path d="M24 27 C 13 28, 8 21, 9 13 C 18 12, 24 17, 24 27 Z"/><path d="M24 27 C 35 28, 40 21, 39 13 C 30 12, 24 17, 24 27 Z"/></g></svg>
-          <svg class="rays" viewBox="0 0 60 30"><g fill="none" stroke="#F8BD25" stroke-width="3" stroke-linecap="round"><path d="M-2 14 L 6 18 M8 4 L 12 11 M24 0 L 24 8 M40 4 L 36 11 M50 14 L 42 18"/></g></svg>
         </div>
         <svg class="deco" style="left:75.16%;top:33px;width:44px;height:80px" viewBox="0 0 44 80"><path d="M8 78 C -2 60, 4 30, 22 14 C 34 4, 42 12, 36 22 C 30 32, 20 22, 28 10" fill="none" stroke="#349C5C" stroke-width="2.2" stroke-linecap="round"/></svg>
         <h3>We Want Learners<br> to Want to Learn</h3>
@@ -215,6 +201,52 @@
         <p>Ultimately, we want to create a shift<br class="d"> from: <strong>“I have to learn this.”</strong> to<br class="d"> <strong>“I want to know this.”</strong><br class="d"> Because when a learner genuinely<br class="d"> wants to learn, they engage more<br class="d"> deeply, participate more freely, and<br class="d"> build stronger connections with<br class="d"> what they learn.</p>
         <p class="em">That is the kind of learner<br class="d"> we want to help build.</p>
       </article>
+    </div>
+  </div>
+</section>
+
+<section class="section instructor" id="instructor" aria-labelledby="instructor-h">
+  <div class="container">
+    <h2 class="section-title instructor-title" id="instructor-h" data-reveal>Meet Our Lead Instructor</h2>
+    <div class="instructor-grid">
+      <figure class="instructor-photo" data-reveal="left">
+        <span class="ip-backdrop" aria-hidden="true"></span>
+        <span class="ip-ring" aria-hidden="true"></span>
+        <div class="ip-frame">
+          <picture>
+            <source type="image/webp" srcset="assets/images/instructor-serajam-monira-640.webp 640w, assets/images/instructor-serajam-monira-1000.webp 1000w" sizes="(max-width: 999px) 80vw, 430px">
+            <img src="assets/images/instructor-serajam-monira-640.jpg" srcset="assets/images/instructor-serajam-monira-640.jpg 640w, assets/images/instructor-serajam-monira-1000.jpg 1000w" sizes="(max-width: 999px) 80vw, 430px" width="640" height="800" loading="lazy" decoding="async" alt="Serajam Monira, Lead Instructor at Scholarise Academy">
+          </picture>
+        </div>
+      </figure>
+
+      <div class="instructor-body" data-reveal="right">
+        <h3 class="instructor-name">Serajam Monira</h3>
+        <p class="instructor-role">A TESOL-Qualified, Cambridge CELTA-Certified Instructor</p>
+        <blockquote class="instructor-quote">
+          <p>I believe that effective English teaching begins long before a lesson starts—with understanding the learner, identifying their needs, and designing experiences that help them make meaningful progress.</p>
+          <p>My approach brings together language education, learner-centred teaching, purposeful material design, and reflective teaching practice.</p>
+        </blockquote>
+        <div class="instructor-quals">
+          <h4>Qualifications</h4>
+          <ul>
+            <li><span class="iq-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9.5 12 5l10 4.5-10 4.5z"/><path d="M6 11.5v4.5c0 1.4 2.7 3 6 3s6-1.6 6-3v-4.5"/><path d="M22 9.5v5"/></svg></span><span>M.A. in TESOL, BRAC University</span></li>
+            <li><span class="iq-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="M8.5 13.9 7 22l5-3 5 3-1.5-8.1"/></svg></span><span>Cambridge CELTA, UK</span></li>
+          </ul>
+        </div>
+        <a class="btn btn-primary instructor-cta" href="how-we-teach/">Explore Our Learning Approach <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+
+    <div class="impact" data-reveal>
+      <h4 class="impact-title">Teaching Impact</h4>
+      <ul class="impact-list" data-stagger="90">
+        <li data-reveal><strong data-count="500" data-suffix="+">500+</strong><span>Students Taught</span></li>
+        <li data-reveal><strong data-count="1000" data-suffix="+">1,000+</strong><span>Teaching Hours</span></li>
+        <li data-reveal><strong data-count="3" data-suffix="+">3+</strong><span>Years Teaching Experience</span></li>
+        <li data-reveal><strong data-count="90" data-suffix="%">90%</strong><span>Student Satisfaction Rate</span></li>
+        <li data-reveal><strong data-count="100" data-suffix="+">100+</strong><span>Learning Resources Created</span></li>
+      </ul>
     </div>
   </div>
 </section>
@@ -234,7 +266,7 @@
       <article class="course-card is-wide" data-track="phonics" data-reveal>
         <div class="course-head"><span class="course-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><text x="12" y="16.8" text-anchor="middle" font-family="Poppins, sans-serif" font-weight="700" font-size="12.5" fill="currentColor">Aa</text><path d="M5 20.5h14" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg></span><div><p class="course-track">Phonics</p><h3>English Phonics Foundation</h3></div></div>
         <dl class="course-info"><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9.5 12 5l10 4.5-10 4.5z"/><path d="M6 11.5v4.5c0 1.4 2.7 3 6 3s6-1.6 6-3v-4.5"/><path d="M22 9.5v5"/></svg><dt>Grades</dt><dd>Pre-primary, 1-2</dd></div><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"/><path d="M4.5 20a7.5 7.5 0 0 1 15 0"/></svg><dt>Recommended Age</dt><dd>4–6</dd></div></dl>
-        <a class="course-link" href="contactus/" aria-label="Enroll in English Phonics Foundation">Enroll Now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
+        <a class="course-link" href="enroll/" aria-label="Enroll in English Phonics Foundation">Enroll Now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
       </article>
       <article class="course-card" data-track="grammar" data-reveal>
         <div class="course-top"><span class="course-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7c-2-1.6-5-2.2-8-1.8v13c3-.4 6 .2 8 1.8 2-1.6 5-2.2 8-1.8v-13c-3-.4-6 .2-8 1.8z"/><path d="M12 7v13"/></svg></span><span class="course-level">Basic</span></div>
@@ -242,7 +274,7 @@
         <h3>English Grammar Course</h3>
         <div class="level-meter" aria-hidden="true"><i class="on"></i><i></i><i></i></div>
         <dl class="course-info"><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 20v-5"/><path d="M12 20V10"/><path d="M19 20V4"/></svg><dt>Level</dt><dd>Basic</dd></div><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9.5 12 5l10 4.5-10 4.5z"/><path d="M6 11.5v4.5c0 1.4 2.7 3 6 3s6-1.6 6-3v-4.5"/><path d="M22 9.5v5"/></svg><dt>Grades</dt><dd>1-2</dd></div><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"/><path d="M4.5 20a7.5 7.5 0 0 1 15 0"/></svg><dt>Recommended Age</dt><dd>6-7</dd></div></dl>
-        <a class="course-link" href="contactus/" aria-label="Enroll in English Grammar Course – Basic">Enroll Now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
+        <a class="course-link" href="enroll/" aria-label="Enroll in English Grammar Course – Basic">Enroll Now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
       </article>
       <article class="course-card" data-track="grammar" data-reveal>
         <div class="course-top"><span class="course-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7c-2-1.6-5-2.2-8-1.8v13c3-.4 6 .2 8 1.8 2-1.6 5-2.2 8-1.8v-13c-3-.4-6 .2-8 1.8z"/><path d="M12 7v13"/></svg></span><span class="course-level">Intermediate</span></div>
@@ -250,7 +282,7 @@
         <h3>English Grammar Course</h3>
         <div class="level-meter" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i></div>
         <dl class="course-info"><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 20v-5"/><path d="M12 20V10"/><path d="M19 20V4"/></svg><dt>Level</dt><dd>Intermediate</dd></div><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9.5 12 5l10 4.5-10 4.5z"/><path d="M6 11.5v4.5c0 1.4 2.7 3 6 3s6-1.6 6-3v-4.5"/><path d="M22 9.5v5"/></svg><dt>Grades</dt><dd>3-5</dd></div><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"/><path d="M4.5 20a7.5 7.5 0 0 1 15 0"/></svg><dt>Recommended Age</dt><dd>8-10</dd></div></dl>
-        <a class="course-link" href="contactus/" aria-label="Enroll in English Grammar Course – Intermediate">Enroll Now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
+        <a class="course-link" href="enroll/" aria-label="Enroll in English Grammar Course – Intermediate">Enroll Now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
       </article>
       <article class="course-card" data-track="grammar" data-reveal>
         <div class="course-top"><span class="course-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7c-2-1.6-5-2.2-8-1.8v13c3-.4 6 .2 8 1.8 2-1.6 5-2.2 8-1.8v-13c-3-.4-6 .2-8 1.8z"/><path d="M12 7v13"/></svg></span><span class="course-level">Advanced</span></div>
@@ -258,7 +290,7 @@
         <h3>English Grammar Course</h3>
         <div class="level-meter" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></div>
         <dl class="course-info"><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 20v-5"/><path d="M12 20V10"/><path d="M19 20V4"/></svg><dt>Level</dt><dd>Advanced</dd></div><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9.5 12 5l10 4.5-10 4.5z"/><path d="M6 11.5v4.5c0 1.4 2.7 3 6 3s6-1.6 6-3v-4.5"/><path d="M22 9.5v5"/></svg><dt>Grades</dt><dd>6-8</dd></div><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"/><path d="M4.5 20a7.5 7.5 0 0 1 15 0"/></svg><dt>Recommended Age</dt><dd>11-14</dd></div></dl>
-        <a class="course-link" href="contactus/" aria-label="Enroll in English Grammar Course – Advanced">Enroll Now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
+        <a class="course-link" href="enroll/" aria-label="Enroll in English Grammar Course – Advanced">Enroll Now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
       </article>
       <article class="course-card" data-track="speaking" data-reveal>
         <div class="course-top"><span class="course-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8"/><path d="M8 12.5h5"/></svg></span><span class="course-level">Basic</span></div>
@@ -266,7 +298,7 @@
         <h3>English Speaking Course</h3>
         <div class="level-meter" aria-hidden="true"><i class="on"></i><i></i><i></i></div>
         <dl class="course-info"><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 20v-5"/><path d="M12 20V10"/><path d="M19 20V4"/></svg><dt>Level</dt><dd>Basic</dd></div><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9.5 12 5l10 4.5-10 4.5z"/><path d="M6 11.5v4.5c0 1.4 2.7 3 6 3s6-1.6 6-3v-4.5"/><path d="M22 9.5v5"/></svg><dt>Grades</dt><dd>1-2</dd></div><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"/><path d="M4.5 20a7.5 7.5 0 0 1 15 0"/></svg><dt>Recommended Age</dt><dd>6-7</dd></div></dl>
-        <a class="course-link" href="contactus/" aria-label="Enroll in English Speaking Course – Basic">Enroll Now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
+        <a class="course-link" href="enroll/" aria-label="Enroll in English Speaking Course – Basic">Enroll Now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
       </article>
       <article class="course-card" data-track="speaking" data-reveal>
         <div class="course-top"><span class="course-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8"/><path d="M8 12.5h5"/></svg></span><span class="course-level">Intermediate</span></div>
@@ -274,7 +306,7 @@
         <h3>English Speaking Course</h3>
         <div class="level-meter" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i></div>
         <dl class="course-info"><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 20v-5"/><path d="M12 20V10"/><path d="M19 20V4"/></svg><dt>Level</dt><dd>Intermediate</dd></div><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9.5 12 5l10 4.5-10 4.5z"/><path d="M6 11.5v4.5c0 1.4 2.7 3 6 3s6-1.6 6-3v-4.5"/><path d="M22 9.5v5"/></svg><dt>Grades</dt><dd>3-5</dd></div><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"/><path d="M4.5 20a7.5 7.5 0 0 1 15 0"/></svg><dt>Recommended Age</dt><dd>8-10</dd></div></dl>
-        <a class="course-link" href="contactus/" aria-label="Enroll in English Speaking Course – Intermediate">Enroll Now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
+        <a class="course-link" href="enroll/" aria-label="Enroll in English Speaking Course – Intermediate">Enroll Now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
       </article>
       <article class="course-card" data-track="speaking" data-reveal>
         <div class="course-top"><span class="course-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8"/><path d="M8 12.5h5"/></svg></span><span class="course-level">Advanced</span></div>
@@ -282,7 +314,7 @@
         <h3>English Speaking Course</h3>
         <div class="level-meter" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></div>
         <dl class="course-info"><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 20v-5"/><path d="M12 20V10"/><path d="M19 20V4"/></svg><dt>Level</dt><dd>Advanced</dd></div><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9.5 12 5l10 4.5-10 4.5z"/><path d="M6 11.5v4.5c0 1.4 2.7 3 6 3s6-1.6 6-3v-4.5"/><path d="M22 9.5v5"/></svg><dt>Grades</dt><dd>6-8</dd></div><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"/><path d="M4.5 20a7.5 7.5 0 0 1 15 0"/></svg><dt>Recommended Age</dt><dd>11-14</dd></div></dl>
-        <a class="course-link" href="contactus/" aria-label="Enroll in English Speaking Course – Advanced">Enroll Now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
+        <a class="course-link" href="enroll/" aria-label="Enroll in English Speaking Course – Advanced">Enroll Now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
       </article>
     </div>
   </div>
@@ -300,7 +332,6 @@
         <p class="plan-tag">Learn Together</p>
         <p class="plan-price"><strong>BDT 3,000/=</strong><span>Per Month</span></p>
         <ul class="plan-features"><li><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#349C5C"/><path d="M5.8 10.3l2.8 2.8 5.6-6" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Weekly 2 Live Classes</span></li><li><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#349C5C"/><path d="M5.8 10.3l2.8 2.8 5.6-6" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Up to 8 Learners Per Batch</span></li><li><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#349C5C"/><path d="M5.8 10.3l2.8 2.8 5.6-6" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>1 Hour 20 Minutes Class time</span></li><li><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#349C5C"/><path d="M5.8 10.3l2.8 2.8 5.6-6" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>PDF Learning Materials</span></li><li><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#349C5C"/><path d="M5.8 10.3l2.8 2.8 5.6-6" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Class Recording Provided</span></li><li><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#349C5C"/><path d="M5.8 10.3l2.8 2.8 5.6-6" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Monthly Parent Meeting</span></li></ul>
-        <a class="btn btn-primary" href="contactus/">Enroll Now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
       </article>
       <article class="price-card is-dark" data-reveal>
         <span class="plan-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.5 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/><path d="M16.5 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/><path d="M2.5 19a5 5 0 0 1 10 0"/><path d="M11.5 19a5 5 0 0 1 10 0"/></svg></span>
@@ -308,16 +339,65 @@
         <p class="plan-tag">Learn Your Way</p>
         <p class="plan-price"><strong>BDT 7,000/=</strong><span>Per Month</span></p>
         <ul class="plan-features"><li><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#9fe0b8"/><path d="M5.8 10.3l2.8 2.8 5.6-6" fill="none" stroke="#035643" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Weekly 2 Live Classes</span></li><li><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#9fe0b8"/><path d="M5.8 10.3l2.8 2.8 5.6-6" fill="none" stroke="#035643" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>One Learner + One Teacher</span></li><li><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#9fe0b8"/><path d="M5.8 10.3l2.8 2.8 5.6-6" fill="none" stroke="#035643" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>1 Hour 20 Minutes Class time</span></li><li><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#9fe0b8"/><path d="M5.8 10.3l2.8 2.8 5.6-6" fill="none" stroke="#035643" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>PDF Learning Materials</span></li><li><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#9fe0b8"/><path d="M5.8 10.3l2.8 2.8 5.6-6" fill="none" stroke="#035643" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Class Recording Provided</span></li><li><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#9fe0b8"/><path d="M5.8 10.3l2.8 2.8 5.6-6" fill="none" stroke="#035643" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Monthly Parent Meeting</span></li></ul>
-        <a class="btn btn-light" href="contactus/">Enroll Now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
       </article>
       <article class="price-card" data-reveal>
         <span class="plan-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h10"/><path d="M18 6h2"/><path d="M4 12h4"/><path d="M12 12h8"/><path d="M4 18h12"/><path d="M20 18h0"/><path d="M14 4v4"/><path d="M8 10v4"/><path d="M16 16v4"/></svg></span>
-        <h3 class="plan-name">Custom Learning</h3>
+        <h3 class="plan-name">Personalized Learning</h3>
         <p class="plan-tag">Built Around Your Needs</p>
         <p class="plan-price"><strong>BDT 10,000/=</strong><span>Per Month</span></p>
         <ul class="plan-features"><li><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#349C5C"/><path d="M5.8 10.3l2.8 2.8 5.6-6" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Weekly 2 Live Classes</span></li><li><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#349C5C"/><path d="M5.8 10.3l2.8 2.8 5.6-6" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>One Learner + One Teacher</span></li><li><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#349C5C"/><path d="M5.8 10.3l2.8 2.8 5.6-6" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>1 Hour 20 Minutes Class Time</span></li><li><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#349C5C"/><path d="M5.8 10.3l2.8 2.8 5.6-6" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Custom PDF Learning Materials</span></li><li><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#349C5C"/><path d="M5.8 10.3l2.8 2.8 5.6-6" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Custom Learning Plan</span></li><li><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#349C5C"/><path d="M5.8 10.3l2.8 2.8 5.6-6" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Personalised Homework &amp; Practice</span></li><li><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#349C5C"/><path d="M5.8 10.3l2.8 2.8 5.6-6" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Class Recording Provided</span></li><li><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#349C5C"/><path d="M5.8 10.3l2.8 2.8 5.6-6" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Monthly Parent Meeting</span></li></ul>
-        <a class="btn btn-primary" href="contactus/">Enroll Now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
       </article>
+    </div>
+  </div>
+</section>
+
+<section class="section faq" id="faq" aria-labelledby="faq-h">
+  <span class="faq-bubble b1" aria-hidden="true">?</span><span class="faq-bubble b2" aria-hidden="true">?</span><span class="faq-bubble b3" aria-hidden="true">?</span>
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <h2 class="section-title" id="faq-h">Frequently Asked Questions</h2>
+      <p class="section-sub">Quick answers for parents and learners.</p>
+    </div>
+    <div class="faq-list" data-stagger="70">
+      <div class="faq-item is-open" data-reveal>
+        <h3 class="faq-h"><button type="button" class="faq-btn" id="faq-q01" aria-expanded="true" aria-controls="faq-a01"><span class="faq-num" aria-hidden="true">01</span><span class="faq-q">What is Scholarise Academy?</span><span class="faq-icon" aria-hidden="true"></span></button></h3>
+        <div class="faq-a" id="faq-a01" role="region" aria-labelledby="faq-q01"><div class="faq-a-inner"><p>Scholarise Academy is an online English learning platform where learners build strong English skills through purposeful lessons, engaging activities, and learner-centred teaching.</p></div></div>
+      </div>
+      <div class="faq-item" data-reveal>
+        <h3 class="faq-h"><button type="button" class="faq-btn" id="faq-q02" aria-expanded="false" aria-controls="faq-a02"><span class="faq-num" aria-hidden="true">02</span><span class="faq-q">Who can learn at Scholarise Academy?</span><span class="faq-icon" aria-hidden="true"></span></button></h3>
+        <div class="faq-a" id="faq-a02" role="region" aria-labelledby="faq-q02"><div class="faq-a-inner"><p>Our English programmes are designed for learners from Grades 1–8, generally aged 6–14. The recommended level depends on the learner’s age, current skills, and learning needs.</p></div></div>
+      </div>
+      <div class="faq-item" data-reveal>
+        <h3 class="faq-h"><button type="button" class="faq-btn" id="faq-q03" aria-expanded="false" aria-controls="faq-a03"><span class="faq-num" aria-hidden="true">03</span><span class="faq-q">What can my learner learn here?</span><span class="faq-icon" aria-hidden="true"></span></button></h3>
+        <div class="faq-a" id="faq-a03" role="region" aria-labelledby="faq-q03"><div class="faq-a-inner"><p>We offer English Grammar, Spoken English, and Phonics. We also plan learning activities that help learners improve their reading, writing, speaking, and understanding of English.</p></div></div>
+      </div>
+      <div class="faq-item" data-reveal>
+        <h3 class="faq-h"><button type="button" class="faq-btn" id="faq-q04" aria-expanded="false" aria-controls="faq-a04"><span class="faq-num" aria-hidden="true">04</span><span class="faq-q">How are your classes different?</span><span class="faq-icon" aria-hidden="true"></span></button></h3>
+        <div class="faq-a" id="faq-a04" role="region" aria-labelledby="faq-q04"><div class="faq-a-inner"><p>We do more than explain rules and ask learners to memorise. We help them understand, practise, ask questions, share ideas, and use English in meaningful ways.</p></div></div>
+      </div>
+      <div class="faq-item" data-reveal>
+        <h3 class="faq-h"><button type="button" class="faq-btn" id="faq-q05" aria-expanded="false" aria-controls="faq-a05"><span class="faq-num" aria-hidden="true">05</span><span class="faq-q">Are the classes online or in person?</span><span class="faq-icon" aria-hidden="true"></span></button></h3>
+        <div class="faq-a" id="faq-a05" role="region" aria-labelledby="faq-q05"><div class="faq-a-inner"><p>Our classes are conducted online, so learners can join from home with a suitable device and a stable internet connection.</p></div></div>
+      </div>
+      <div class="faq-item" data-reveal>
+        <h3 class="faq-h"><button type="button" class="faq-btn" id="faq-q06" aria-expanded="false" aria-controls="faq-a06"><span class="faq-num" aria-hidden="true">06</span><span class="faq-q">Can my learner join a group or study individually?</span><span class="faq-icon" aria-hidden="true"></span></button></h3>
+        <div class="faq-a" id="faq-a06" role="region" aria-labelledby="faq-q06"><div class="faq-a-inner"><p>Yes. We offer Small Group classes with up to 6 learners, One-to-One classes for individual attention, and Personalized Learning designed around specific learning needs.</p></div></div>
+      </div>
+      <div class="faq-item" data-reveal>
+        <h3 class="faq-h"><button type="button" class="faq-btn" id="faq-q07" aria-expanded="false" aria-controls="faq-a07"><span class="faq-num" aria-hidden="true">07</span><span class="faq-q">How do I choose the right course or level?</span><span class="faq-icon" aria-hidden="true"></span></button></h3>
+        <div class="faq-a" id="faq-a07" role="region" aria-labelledby="faq-q07"><div class="faq-a-inner"><p>You can explore our <a href="#courses">Courses section</a> to learn about the available programmes. If you are unsure which course or level is right, <a href="contact/">contact us</a> and we will help you decide.</p></div></div>
+      </div>
+      <div class="faq-item" data-reveal>
+        <h3 class="faq-h"><button type="button" class="faq-btn" id="faq-q08" aria-expanded="false" aria-controls="faq-a08"><span class="faq-num" aria-hidden="true">08</span><span class="faq-q">How can I enrol my learner?</span><span class="faq-icon" aria-hidden="true"></span></button></h3>
+        <div class="faq-a" id="faq-a08" role="region" aria-labelledby="faq-q08"><div class="faq-a-inner"><p>Visit our <a href="#courses">Courses section</a> and click “<a href="enroll/">Enroll Now</a>,” or <a href="contact/">contact us</a> for guidance. We will help you understand the available options and the next steps.</p></div></div>
+      </div>
+    </div>
+    <div class="faq-cta" data-reveal>
+      <div class="faq-cta-text"><h3>Still have a question?</h3><p>Message us and we will help you choose the right course and level.</p></div>
+      <div class="faq-cta-actions">
+        <a class="btn faq-wa js-whatsapp" href="https://wa.me/8801338055356" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.7" d="M12 4.3a7.7 7.7 0 0 0-6.6 11.6l-1 3.8 3.9-1a7.7 7.7 0 1 0 3.7-14.4z"/><path fill="currentColor" d="M9.4 8.5c.2-.4.4-.4.6-.4h.5c.2 0 .4 0 .5.4l.7 1.6c.1.2 0 .4-.1.5l-.5.6c-.1.1-.2.3 0 .5.3.5.8 1.1 1.3 1.5.6.5 1.1.7 1.4.8.2.1.3 0 .4-.1l.6-.7c.1-.2.3-.2.5-.1l1.6.8c.2.1.3.2.3.3 0 .3-.1.9-.5 1.2-.4.4-1.1.6-1.7.5-.9-.1-2-.5-3.2-1.5-1.3-1.1-2-2.4-2.3-3-.3-.7-.2-1.5.1-1.9z"/></svg>Chat on WhatsApp</a>
+        <a class="btn btn-light" href="contact/">Contact Us</a>
+      </div>
     </div>
   </div>
 </section>
@@ -332,17 +412,17 @@
         <ul class="social" aria-label="Social media">
           <li><a class="fb" href="https://www.facebook.com/scholariseacademy" target="_blank" rel="noopener" aria-label="Scholarise on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M13.4 21v-7.6h2.6l.4-3h-3V8.5c0-.9.3-1.5 1.5-1.5h1.6V4.3c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H7.7v3h2.6V21z"/></svg></a></li>
           <li><a class="li" href="https://www.linkedin.com/company/scholariseacademy" target="_blank" rel="noopener" aria-label="Scholarise on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.3 9.4h2.6v8.4H6.3zM7.6 5.2a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zM10.6 9.4h2.5v1.2c.4-.7 1.2-1.4 2.6-1.4 2.7 0 3.2 1.8 3.2 4.1v4.5h-2.6v-4c0-1 0-2.2-1.4-2.2s-1.6 1-1.6 2.1v4.1h-2.6z"/></svg></a></li>
-          <li><a class="em" href="mailto:contact.scholariseacademy@gmail.com" aria-label="Email Scholarise"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 5.5h17v13h-17z"/><path d="M4 6.5l8 6 8-6"/></svg></a></li>
+          <li><a class="em" href="mailto:contact.scholarise@gmail.com" aria-label="Email Scholarise"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 5.5h17v13h-17z"/><path d="M4 6.5l8 6 8-6"/></svg></a></li>
         </ul>
       </div>
       <div class="footer-col" data-reveal>
         <h4>Quick Links</h4>
         <ul>
           <li><a href="#home">Home</a></li>
-          <li><a href="aboutus/">About Us</a></li>
-          <li><a href="#how-we-teach">What We Believe</a></li>
+          <li><a href="about/">About</a></li>
+          <li><a href="#what-we-believe">What We Believe</a></li>
           <li><a href="#courses">Courses</a></li>
-          <li><a href="contactus/">Contact Us</a></li>
+          <li><a href="contact/">Contact</a></li>
         </ul>
       </div>
       <div class="footer-col" data-reveal>
@@ -365,10 +445,10 @@
         <h4>Support</h4>
         <ul>
           <li><a href="terms&amp;condition/">Terms &amp; Conditions</a></li>
-          <li><a href="contactus/">Contact Us</a></li>
-          <li><a href="aboutus/">About Us</a></li>
+          <li><a href="contact/">Contact</a></li>
+          <li><a href="about/">About</a></li>
           <li><a href="blogs/">Blogs</a></li>
-          <li><a href="privacypolicy/">Privacy Policy</a></li>
+          <li><a href="privacy-policy/">Privacy Policy</a></li>
         </ul>
       </div>
       <div class="newsletter" data-reveal>
@@ -394,20 +474,20 @@
     <div class="container">
       <ul class="contact-strip">
         <li><svg viewBox="0 0 21 27" aria-hidden="true"><path d="M10.5 1.2A9.3 9.3 0 0 0 1.2 10.5c0 6.8 9.3 15.3 9.3 15.3s9.3-8.5 9.3-15.3a9.3 9.3 0 0 0-9.3-9.3z" fill="none" stroke="#fff" stroke-width="1.8"/><circle cx="10.5" cy="10.5" r="3.4" fill="none" stroke="#fff" stroke-width="1.8"/></svg><span>Dhaka, Bangladesh<small>(Online First)</small></span></li>
-        <li><svg viewBox="0 0 25 18" aria-hidden="true"><rect x="1" y="1" width="23" height="16" rx="2" fill="none" stroke="#fff" stroke-width="1.8"/><path d="M1.8 2 L 12.5 10 L 23.2 2" fill="none" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"/></svg><span><a href="mailto:contact.scholariseacademy@gmail.com">contact.scholariseacademy@gmail.com</a><small>We usually reply within 24 hours.</small></span></li>
+        <li><svg viewBox="0 0 25 18" aria-hidden="true"><rect x="1" y="1" width="23" height="16" rx="2" fill="none" stroke="#fff" stroke-width="1.8"/><path d="M1.8 2 L 12.5 10 L 23.2 2" fill="none" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"/></svg><span><a href="mailto:contact.scholarise@gmail.com">contact.scholarise@gmail.com</a><small>We usually reply within 24 hours.</small></span></li>
         <li><svg viewBox="0 0 27 27" aria-hidden="true"><circle cx="13.5" cy="13.5" r="12.3" fill="none" stroke="#fff" stroke-width="1.8"/><path d="M13.5 6.5 V 13.5 L 18 17" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/></svg><span>Sun - Thu, 9:00 AM - 6:00 PM<small>(GMT+6)</small></span></li>
       </ul>
       <div class="bar-bottom">
         <p>© 2026 Scholarise Academy. All rights reserved.</p>
         <ul class="legal-links">
-          <li><a href="privacypolicy/">Privacy Policy</a></li>
+          <li><a href="privacy-policy/">Privacy Policy</a></li>
           <li><a href="terms&amp;condition/">Terms &amp; Conditions</a></li>
         </ul>
       </div>
     </div>
   </div>
 </footer>
-<a class="wa-float js-whatsapp" href="https://wa.me/" target="_blank" rel="noopener" aria-label="Chat with Scholarise on WhatsApp"><svg viewBox="0 0 24 24"><path fill="none" stroke="#fff" stroke-width="1.7" d="M12 4.3a7.7 7.7 0 0 0-6.6 11.6l-1 3.8 3.9-1a7.7 7.7 0 1 0 3.7-14.4z"/><path fill="#fff" d="M9.4 8.5c.2-.4.4-.4.6-.4h.5c.2 0 .4 0 .5.4l.7 1.6c.1.2 0 .4-.1.5l-.5.6c-.1.1-.2.3 0 .5.3.5.8 1.1 1.3 1.5.6.5 1.1.7 1.4.8.2.1.3 0 .4-.1l.6-.7c.1-.2.3-.2.5-.1l1.6.8c.2.1.3.2.3.3 0 .3-.1.9-.5 1.2-.4.4-1.1.6-1.7.5-.9-.1-2-.5-3.2-1.5-1.3-1.1-2-2.4-2.3-3-.3-.7-.2-1.5.1-1.9z"/></svg><span class="wa-tip">Chat on WhatsApp</span></a>
+<a class="wa-float js-whatsapp" href="https://wa.me/8801338055356" target="_blank" rel="noopener" aria-label="Chat with Scholarise on WhatsApp"><svg viewBox="0 0 24 24"><path fill="none" stroke="#fff" stroke-width="1.7" d="M12 4.3a7.7 7.7 0 0 0-6.6 11.6l-1 3.8 3.9-1a7.7 7.7 0 1 0 3.7-14.4z"/><path fill="#fff" d="M9.4 8.5c.2-.4.4-.4.6-.4h.5c.2 0 .4 0 .5.4l.7 1.6c.1.2 0 .4-.1.5l-.5.6c-.1.1-.2.3 0 .5.3.5.8 1.1 1.3 1.5.6.5 1.1.7 1.4.8.2.1.3 0 .4-.1l.6-.7c.1-.2.3-.2.5-.1l1.6.8c.2.1.3.2.3.3 0 .3-.1.9-.5 1.2-.4.4-1.1.6-1.7.5-.9-.1-2-.5-3.2-1.5-1.3-1.1-2-2.4-2.3-3-.3-.7-.2-1.5.1-1.9z"/></svg><span class="wa-tip">Chat on WhatsApp</span></a>
 <script src="assets/js/main.js"></script>
 </body>
 </html>
