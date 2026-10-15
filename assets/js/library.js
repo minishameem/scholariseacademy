@@ -178,6 +178,23 @@
   if (params.get('q')) state.q = params.get('q').slice(0, 80);
   if (els.search) els.search.value = state.q;
 
+
+  /* ---------- reveal on scroll for rendered content (uses main.js) ---------- */
+  function revealIn(root, selector, step, perRow) {
+    if (typeof window.scholariseReveal !== 'function' || !root) return;
+    Array.prototype.forEach.call(root.querySelectorAll(selector), function (el, i) {
+      el.setAttribute('data-reveal', '');
+      el.style.setProperty('--d', ((i % perRow) * step) + 'ms');
+    });
+    window.scholariseReveal(root);
+  }
+  function revealResults() {
+    if (typeof window.scholariseReveal !== 'function') return;
+    Array.prototype.forEach.call(els.results.querySelectorAll('.lib-section-head, .lib-empty'), function (el) { el.setAttribute('data-reveal', ''); });
+    Array.prototype.forEach.call(els.results.querySelectorAll('.lib-grid'), function (g) { revealIn(g, '.lib-card', 80, 4); });
+    window.scholariseReveal(els.results);
+  }
+
   function countFor(id) { return resources.filter(function (r) { return r.category === id; }).length; }
 
   function renderCategories() {
@@ -191,6 +208,7 @@
         '<span class="lib-count">' + countLabel(countFor(c.id)) + '</span></button>';
     });
     els.cats.innerHTML = html;
+    revealIn(els.cats, '.lib-catcard', 70, 5);
   }
   function countLabel(n) { return n ? n + (n === 1 ? ' resource' : ' resources') : 'Coming soon'; }
 
@@ -300,6 +318,7 @@
       html = found.length ? gridHTML(found) : (cat && !countFor(cat.id) && !state.q ? emptyCategoryHTML(cat) : noMatchHTML());
     }
     els.results.innerHTML = html;
+    revealResults();
     els.total.textContent = shown ? shown + (shown === 1 ? ' resource' : ' resources') : '';
     if (announce) els.status.textContent = shown ? shown + (shown === 1 ? ' resource found.' : ' resources found.') : 'No resources found.';
 
@@ -357,8 +376,10 @@
   if (DATA.demo === true && resources.length && els.toolbar) {
     var note = document.createElement('p');
     note.className = 'lib-demo-note';
+    note.setAttribute('data-reveal', '');
     note.innerHTML = '<b>Preview</b> These are sample resources to show how the library will look. Real materials are coming soon.';
     els.toolbar.parentNode.insertBefore(note, els.toolbar);
+    if (typeof window.scholariseReveal === 'function') window.scholariseReveal(note.parentNode);
   }
 
   renderCategories();

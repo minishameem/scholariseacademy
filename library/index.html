@@ -72,7 +72,7 @@
 
 <section class="lib-browse" id="browse" aria-labelledby="browse-h">
   <div class="container">
-    <div class="lib-browse-head">
+    <div class="lib-browse-head" data-reveal>
       <h2 class="section-title" id="browse-h">Browse by Category</h2>
       <p>Choose a shelf to see its resources. Choose it again to see everything.</p>
     </div>
@@ -84,21 +84,21 @@
 <section class="lib-access-band" aria-labelledby="access-h">
   <div class="container">
     <h2 class="sr-only" id="access-h">How resources can be used</h2>
-    <ul class="lib-access-list">
-      <li><span class="lib-access-badge is-free">FREE</span><p><b>Open to everyone.</b> Download and use at home or in class.</p></li>
-      <li><span class="lib-access-badge is-enrolled_only">ONLY FOR ENROLLED LEARNERS</span><p><b>Part of our courses.</b> Shared directly with enrolled learners.</p></li>
-      <li><span class="lib-access-badge is-external">EXTERNAL RESOURCE</span><p><b>Trusted links.</b> Useful websites and tools from other providers.</p></li>
+    <ul class="lib-access-list" data-stagger="110">
+      <li data-reveal><span class="lib-access-badge is-free">FREE</span><p><b>Open to everyone.</b> Download and use at home or in class.</p></li>
+      <li data-reveal><span class="lib-access-badge is-enrolled_only">ONLY FOR ENROLLED LEARNERS</span><p><b>Part of our courses.</b> Shared directly with enrolled learners.</p></li>
+      <li data-reveal><span class="lib-access-badge is-external">EXTERNAL RESOURCE</span><p><b>Trusted links.</b> Useful websites and tools from other providers.</p></li>
     </ul>
   </div>
 </section>
 
 <section class="lib-results-wrap" aria-labelledby="lib-results-title">
   <div class="container">
-    <div class="lib-results-head" id="lib-results-head">
+    <div class="lib-results-head" id="lib-results-head" data-reveal>
       <div><h2 class="section-title" id="lib-results-title">Explore All Resources</h2><p class="lib-total" id="lib-total"></p></div>
       <button type="button" class="lib-reset" id="lib-reset" hidden>Clear filters</button>
     </div>
-    <div class="lib-toolbar" id="lib-toolbar" hidden>
+    <div class="lib-toolbar" id="lib-toolbar" data-reveal hidden>
       <div class="lib-field"><span class="lib-field-label" id="acc-l">Access</span><div class="lib-chips" id="lib-access" role="group" aria-labelledby="acc-l"></div></div>
       <div class="lib-field"><label class="lib-field-label" for="lib-level">Level</label><select id="lib-level"></select></div>
       <div class="lib-field"><label class="lib-field-label" for="lib-format">Format</label><select id="lib-format"></select></div>

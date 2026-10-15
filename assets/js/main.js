@@ -48,8 +48,9 @@
     $$('[data-reveal]', group).forEach(function (el, i) { el.style.setProperty('--d', (i * step) + 'ms'); });
   });
   var revealTargets = $$('[data-reveal], .social');
+  var io = null;
   if ('IntersectionObserver' in window) {
-    var io = new IntersectionObserver(function (entries) {
+    io = new IntersectionObserver(function (entries) {
       entries.forEach(function (en) {
         if (!en.isIntersecting) return;
         var el = en.target;
@@ -59,10 +60,21 @@
         setTimeout(function () { el.removeAttribute('data-reveal'); el.style.removeProperty('--d'); }, 2000);
       });
     }, { threshold: 0.14, rootMargin: '0px 0px -40px 0px' });
-    revealTargets.forEach(function (el) { io.observe(el); });
+    // Start after every script on the page has run, so content they add (Library cards) is
+    // already in place and sections below it are not revealed while still off screen.
+    var startReveal = function () { revealTargets.forEach(function (el) { io.observe(el); }); };
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', startReveal);
+    else startReveal();
   } else {
     revealTargets.forEach(function (el) { el.classList.add('is-in'); });
   }
+  // Content added later by other scripts (e.g. the Library cards) calls this to join the same reveal-on-scroll.
+  window.scholariseReveal = function (root) {
+    $$('[data-reveal]', root || document).forEach(function (el) {
+      if (el.classList.contains('is-in')) return;
+      if (io) io.observe(el); else el.classList.add('is-in');
+    });
+  };
 
   /* ---------- Home: highlight the nav link of the section on screen ---------- */
   var spyLinks = $$('.main-nav ul a[data-spy]');
