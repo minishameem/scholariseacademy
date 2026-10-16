@@ -60,7 +60,7 @@ window.SCHOLARISE_TOOLKIT = [
       : '<span class="tk-mark">' + esc(initials(t)) + '</span>';
     nodeHTML += '<li class="tk-node' + (t.logo ? '' : ' is-placeholder') + (t.wide ? ' is-wide' : '') + '" data-tool="' + i + '"' +
       ' style="left:' + x.toFixed(2) + '%;top:' + y.toFixed(2) + '%;--i:' + i + '">' +
-      '<span class="tk-pop"><span class="tk-badge">' + badge + '</span><span class="tk-name">' + esc(t.name) + '</span></span></li>';
+      '<span class="tk-pop"><span class="tk-up"><span class="tk-badge">' + badge + '</span><span class="tk-name">' + esc(t.name) + '</span></span></span></li>';
     legendHTML += '<li data-tool="' + i + '" style="--i:' + i + '"><b>' + esc(t.name) + '</b><span>' + esc(t.note || '') + '</span></li>';
 
     var line = document.createElementNS(NS, 'line');

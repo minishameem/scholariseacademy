@@ -48,10 +48,6 @@
 .ox-cb:hover .ox-cb-btn { transform: translateY(-3px); }
 .js .ox-intro-copy.is-in .ox-cb.is-hand .ox-cb-btn svg { animation: oxWave 1.2s ease-in-out .9s 2; transform-origin: 50% 90%; }
 @keyframes oxWave { 0%, 100% { transform: rotate(0); } 25% { transform: rotate(-14deg); } 75% { transform: rotate(12deg); } }
-.ox-more { display: inline-flex; align-items: center; gap: 8px; margin-top: 22px; font-family: var(--font-head); font-weight: 600; font-size: 14px; color: var(--primary); }
-.ox-more svg { width: 16px; height: 16px; transition: transform .3s var(--ease); }
-.ox-more:hover { color: var(--secondary); }
-.ox-more:hover svg { transform: translateY(3px); }
 
 .ox-collage { position: relative; padding: 0 70px 58px 46px; }
 .ox-main { position: relative; z-index: 1; }
