@@ -14,7 +14,7 @@
    The tools are shown for information only. No links, no partnership.
 
    Logo sources (all free to use; the brand names belong to their owners):
-     zoom.svg           gilbarbara/logos (CC0)
+     zoom.svg, google-meet.svg   gilbarbara/logos (CC0)
      canva.svg          Devicon (MIT)
      kahoot.svg, google-slides.svg, google-forms.svg
                         Simple Icons (CC0), in each brand's own colour
@@ -27,7 +27,7 @@ window.SCHOLARISE_TOOLKIT = [
   { name: 'Kahoot!',          note: 'Quizzes and review',         logo: 'assets/images/tools/kahoot.svg' },
   { name: 'Google Slides',    note: 'Lesson presentation',        logo: 'assets/images/tools/google-slides.svg' },
   { name: 'Google Forms',     note: 'Assessment and feedback',    logo: 'assets/images/tools/google-forms.svg' },
-  { name: 'LearningApps.org', note: 'Practice activities',        logo: '', mark: 'LA' },
+  { name: 'Google Meet',      note: 'Lessons and parent meetings', logo: 'assets/images/tools/google-meet.svg' },
   { name: 'Baamboozle',       note: 'Classroom games',            logo: '', mark: 'Bz' }
 ];
 
@@ -45,14 +45,13 @@ window.SCHOLARISE_TOOLKIT = [
   var R = 40;            // orbit radius (% of the square)
   var CORE = 17.6;       // where the lines start (edge of the centre circle)
   var NODE = 7.4;        // where the lines stop (edge of a tool circle)
-  var JITTER = [0, 4, -3, 5, 0, -4, 3, -5]; // small, hand-set variation so the ring feels drawn, not stamped
 
   function esc(s) { return String(s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
   function initials(t) { return t.mark || t.name.replace(/[^A-Za-z]/g, '').slice(0, 2); }
 
   var nodeHTML = '', legendHTML = '';
   tools.forEach(function (t, i) {
-    var deg = -90 + i * (360 / tools.length) + (JITTER[i % JITTER.length] || 0);
+    var deg = -90 + i * (360 / tools.length); // equal spacing, so every tool keeps the same distance as it turns
     var rad = deg * Math.PI / 180, cos = Math.cos(rad), sin = Math.sin(rad);
     var x = 50 + R * cos, y = 50 + R * sin;
     var badge = t.logo

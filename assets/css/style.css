@@ -1072,3 +1072,7 @@ a.info-card.is-link:hover .info-go { background: var(--primary); border-color: v
 @media (prefers-reduced-motion: reduce) {
   .js .price-card[data-reveal] { opacity: 1; transform: none; }
 }
+
+/* photos and logos cannot be dragged off the page (any image, now or added later) */
+img, svg, picture { -webkit-user-drag: none; user-drag: none; }
+img { -webkit-user-select: none; user-select: none; }

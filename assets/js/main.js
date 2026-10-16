@@ -280,4 +280,21 @@
   window.addEventListener('resize', queueBar);
   window.addEventListener('load', queueBar);
   syncBar();
+  /* ---------- Images cannot be dragged off the page (covers images added later too) ---------- */
+  document.addEventListener('dragstart', function (e) {
+    var t = e.target;
+    if (t && (t.tagName === 'IMG' || (t.closest && t.closest('picture, svg')))) e.preventDefault();
+  });
+  var noDrag = function (root) { $$('img', root).forEach(function (img) { img.draggable = false; }); };
+  noDrag(document);
+  if ('MutationObserver' in window) {
+    new MutationObserver(function (list) {
+      list.forEach(function (m) {
+        Array.prototype.forEach.call(m.addedNodes, function (n) {
+          if (n.nodeType !== 1) return;
+          if (n.tagName === 'IMG') n.draggable = false; else noDrag(n);
+        });
+      });
+    }).observe(document.body, { childList: true, subtree: true });
+  }
 })();
