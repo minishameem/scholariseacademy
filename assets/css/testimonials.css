@@ -1,0 +1,95 @@
+/* =========================================================
+   Home: "A Note From Our Parents" (#parent-notes)
+   Brand tokens from style.css. Content: assets/js/testimonials.js
+   ========================================================= */
+
+.pn { position: relative; padding: 72px 0 70px; background: #fff; }
+.pn-head { max-width: 680px; margin: 0 auto; text-align: center; }
+.page-home .pn .pn-title { margin-top: 12px; }
+.pn-sub { margin-top: 12px; font-size: 16px; line-height: 1.7; color: var(--muted); }
+
+/* the light green stage the cards sit on */
+.pn-stage { position: relative; margin-top: 34px; padding: 38px 76px 30px; border-radius: 36px; background: var(--light); }
+
+.pn-track { list-style: none; margin: 0; padding: 8px 4px 16px; display: grid; grid-auto-flow: column;
+  grid-auto-columns: calc((100% - 48px) / 3); gap: 24px; overflow-x: auto; overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory; scroll-behavior: smooth; scrollbar-width: none; border-radius: 22px; }
+.pn-track::-webkit-scrollbar { display: none; }
+.pn-track:focus-visible { outline: 3px solid var(--color-accent); outline-offset: 4px; }
+.pn-slide { scroll-snap-align: start; min-width: 0; }
+
+/* ---------- card ---------- */
+.pn-card { display: flex; flex-direction: column; height: 100%; margin: 0; padding: 26px 26px 22px; border-radius: 22px; background: #fff;
+  border: 1px solid rgba(52, 156, 92, .22); box-shadow: 0 10px 26px rgba(3, 86, 67, .07);
+  transition: transform .4s var(--ease), border-color .4s, box-shadow .4s var(--ease); }
+.pn-card:hover { transform: translateY(-4px); border-color: var(--secondary); box-shadow: 0 18px 36px rgba(3, 86, 67, .12); }
+.pn-top { display: flex; align-items: center; justify-content: space-between; }
+.pn-avatar { display: grid; place-items: center; width: 46px; height: 46px; border-radius: 50%; background: var(--light); color: var(--primary); box-shadow: inset 0 0 0 1px rgba(52, 156, 92, .3); }
+.pn-avatar svg { width: 24px; height: 24px; }
+.pn-quote svg { display: block; width: 26px; height: 20px; fill: var(--color-accent); }
+.pn-stars { display: flex; gap: 3px; margin-top: 18px; }
+.pn-stars svg { width: 17px; height: 17px; fill: var(--color-accent); }
+.pn-text { flex: 1; margin: 12px 0 0; }
+.pn-text p { font-size: 15.5px; line-height: 1.75; color: var(--text); }
+.pn-by { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin-top: 20px; font-family: var(--font-head); font-weight: 600; font-size: 13px; line-height: 1.3; color: var(--primary); }
+.pn-rule { width: 22px; height: 2px; border-radius: 2px; background: var(--secondary); }
+.pn-meta { display: inline-flex; gap: 8px; font-weight: 500; color: var(--muted); }
+
+/* placeholders look clearly like samples, never like real reviews */
+.pn-card.is-placeholder { border-style: dashed; border-color: rgba(52, 156, 92, .45); }
+.pn-card.is-placeholder .pn-text p { font-style: italic; color: var(--muted); }
+.pn-sample-note { display: none; margin-top: 8px; text-align: center; font-size: 12.5px; color: var(--muted); }
+.has-placeholders .pn-sample-note { display: block; }
+
+/* ---------- arrows ---------- */
+.pn-arrow { position: absolute; top: calc(50% - 40px); z-index: 2; display: grid; place-items: center; width: 50px; height: 50px; padding: 0; border-radius: 50%;
+  border: 1px solid rgba(52, 156, 92, .35); background: #fff; color: var(--primary); cursor: pointer; box-shadow: 0 8px 20px rgba(3, 86, 67, .1);
+  transition: background-color .3s, color .3s, transform .3s var(--ease), opacity .3s; }
+.pn-prev { left: 14px; }
+.pn-next { right: 14px; }
+.pn-arrow svg { width: 20px; height: 20px; }
+.pn-arrow:hover:not(:disabled) { background: var(--primary); color: #fff; }
+.pn-prev:hover:not(:disabled) { transform: translateX(-2px); }
+.pn-next:hover:not(:disabled) { transform: translateX(2px); }
+.pn-arrow:focus-visible { outline: 3px solid var(--color-accent); outline-offset: 3px; }
+.pn-arrow:disabled { opacity: .35; cursor: default; box-shadow: none; }
+
+/* ---------- the one memorable detail: a learning-journey path, one stop per parent ---------- */
+.pn-path { position: relative; display: flex; justify-content: space-between; align-items: center; width: min(360px, 70%); margin: 14px auto 0; }
+.pn-path-line { position: absolute; left: 7px; right: 7px; top: 50%; height: 2px; margin-top: -1px; border-radius: 2px; background: rgba(3, 86, 67, .14); overflow: hidden; }
+.pn-path-fill { position: absolute; inset: 0; background: var(--secondary); transform: scaleX(0); transform-origin: left center; transition: transform .6s var(--ease); }
+.pn-stop { position: relative; z-index: 1; width: 14px; height: 14px; padding: 0; border-radius: 50%; border: 2px solid rgba(52, 156, 92, .45); background: #fff; cursor: pointer;
+  transition: background-color .35s, border-color .35s, transform .35s var(--ease); }
+.pn-stop::after { content: ""; position: absolute; inset: -9px; } /* bigger tap area */
+.pn-stop.is-seen { background: var(--secondary); border-color: var(--secondary); }
+.pn-stop.is-here { background: var(--color-accent); border-color: var(--color-accent); transform: scale(1.2); }
+.pn-stop:focus-visible { outline: 3px solid var(--primary); outline-offset: 3px; }
+
+.pn-close { margin-top: 26px; text-align: center; font-family: var(--font-head); font-weight: 500; font-size: 15.5px; color: var(--secondary); }
+
+/* ---------- tablet: two cards ---------- */
+@media (max-width: 999px) {
+  .pn { padding: 60px 0 58px; }
+  .pn-stage { padding: 32px 66px 26px; border-radius: 30px; }
+  .pn-track { grid-auto-columns: calc((100% - 20px) / 2); gap: 20px; }
+}
+
+/* ---------- phone: one card, controls underneath ---------- */
+@media (max-width: 640px) {
+  .pn { padding: 50px 0 48px; }
+  .pn-sub { font-size: 15px; }
+  .pn-stage { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; grid-template-areas: "track track track" "prev path next";
+    align-items: center; gap: 14px 12px; margin-top: 26px; padding: 22px 14px 18px; border-radius: 24px; }
+  .pn-track { grid-area: track; grid-auto-columns: 100%; gap: 14px; padding: 4px 2px 8px; }
+  .pn-arrow { position: static; width: 46px; height: 46px; }
+  .pn-prev { grid-area: prev; }
+  .pn-next { grid-area: next; }
+  .pn-path { grid-area: path; width: 100%; margin: 0; }
+  .pn-card { padding: 22px 20px 20px; }
+  .pn-text p { font-size: 15px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pn-track { scroll-behavior: auto; }
+  .pn-card, .pn-path-fill, .pn-stop, .pn-arrow { transition: none; }
+}

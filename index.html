@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="assets/css/home-compact.css">
   <link rel="stylesheet" href="assets/css/online-experience.css">
   <link rel="stylesheet" href="assets/css/toolkit.css">
+  <link rel="stylesheet" href="assets/css/testimonials.css">
   <script>document.documentElement.classList.add('js')</script>
 </head>
 <body class="page-home">
@@ -494,6 +495,25 @@
   </div>
 </section>
 
+<section class="pn" id="parent-notes" aria-labelledby="pn-title" aria-roledescription="carousel">
+  <div class="container">
+    <div class="pn-head" data-reveal>
+      <p class="eyebrow">A Note From Our Parents</p>
+      <h2 class="section-title pn-title" id="pn-title">The Difference Parents Notice.</h2>
+      <p class="pn-sub">Every learner’s journey is different. Here’s what parents have shared about their experience with Scholarise.</p>
+    </div>
+    <div class="pn-stage" data-reveal>
+      <button type="button" class="pn-arrow pn-prev" aria-label="Previous testimonials" aria-controls="pn-track"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="M11 6l-6 6 6 6"/></svg></button>
+      <ul class="pn-track" id="pn-track" tabindex="0" aria-label="Parent testimonials. Use the left and right arrow keys to move."></ul>
+      <button type="button" class="pn-arrow pn-next" aria-label="Next testimonials" aria-controls="pn-track"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></button>
+      <div class="pn-path" id="pn-path"></div>
+      <p class="sr-only" id="pn-status" aria-live="polite"></p>
+    </div>
+    <p class="pn-close" data-reveal>Every learner deserves an experience worth talking about.</p>
+    <p class="pn-sample-note">These are sample cards. Real parent feedback will be added here.</p>
+  </div>
+</section>
+
 <section class="section faq" id="faq" aria-labelledby="faq-h">
   <span class="faq-bubble b1" aria-hidden="true">?</span><span class="faq-bubble b2" aria-hidden="true">?</span><span class="faq-bubble b3" aria-hidden="true">?</span>
   <div class="container">
@@ -633,5 +653,6 @@
 <script src="assets/js/guard.js"></script>
 <script src="assets/js/online-experience.js"></script>
 <script src="assets/js/toolkit.js"></script>
+<script src="assets/js/testimonials.js"></script>
 </body>
 </html>
