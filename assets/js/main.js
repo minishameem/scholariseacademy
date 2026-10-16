@@ -263,4 +263,21 @@
       setFaq(item, open);
     });
   });
+  /* ---------- Reading progress bar along the top of the page ---------- */
+  var bar = document.createElement('div');
+  bar.className = 'scroll-progress';
+  bar.setAttribute('aria-hidden', 'true');
+  document.body.appendChild(bar);
+  var barTick = false;
+  var syncBar = function () {
+    barTick = false;
+    var max = document.documentElement.scrollHeight - window.innerHeight;
+    var r = max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)) : 0;
+    bar.style.transform = 'scaleX(' + r.toFixed(4) + ')';
+  };
+  var queueBar = function () { if (!barTick) { barTick = true; requestAnimationFrame(syncBar); } };
+  window.addEventListener('scroll', queueBar, { passive: true });
+  window.addEventListener('resize', queueBar);
+  window.addEventListener('load', queueBar);
+  syncBar();
 })();

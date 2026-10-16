@@ -326,6 +326,8 @@
     .page-home main .faq-bubble { display: none; }
   }
   .page-home main .phil-tile img, .page-home main .ip-frame img { -webkit-user-drag: none; user-select: none; -webkit-user-select: none; }
+  .js .page-home main .price-card[data-reveal] { opacity: 0; transform: translateY(48px) scale(.95); transition: opacity .8s var(--ease) var(--d, 0ms), transform 1s cubic-bezier(.22, 1, .36, 1) var(--d, 0ms), box-shadow .45s var(--ease), border-color .45s; }
+  .js .page-home main .price-card[data-reveal].is-in { opacity: 1; transform: none; }
   .page-home main .container { max-width: 1200px; padding: 0 24px; }
   .page-home main .hero-visual { width: min(58.68%, 681px); bottom: 28px; }
   .page-home main .hero-inner { min-height: 0; }

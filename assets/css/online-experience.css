@@ -35,6 +35,24 @@
 .ox-title > span { display: block; }
 .ox-lead { margin-top: 18px; max-width: 470px; font-size: 16px; line-height: 1.75; color: var(--text); }
 
+/* "in every live class" call bar: the controls a learner actually uses */
+.ox-class { margin-top: 28px; }
+.ox-class-label { font-family: var(--font-head); font-weight: 600; font-size: 13.5px; color: var(--primary); }
+.ox-callbar { display: inline-flex; gap: 6px; margin-top: 12px; padding: 10px; border-radius: 22px; background: var(--primary); box-shadow: 0 16px 32px rgba(3, 86, 67, .18); }
+.ox-cb { display: grid; justify-items: center; gap: 7px; width: 84px; padding: 4px 2px 6px; border-radius: 14px; }
+.ox-cb-btn { display: grid; place-items: center; width: 42px; height: 42px; border-radius: 50%; background: rgba(255, 255, 255, .12); color: #fff; transition: transform .3s var(--ease), background-color .3s; }
+.ox-cb-btn svg { width: 20px; height: 20px; }
+.ox-cb-text { font-family: var(--font-head); font-weight: 500; font-size: 11.5px; line-height: 1.2; color: #dff3e7; text-align: center; }
+.ox-cb.is-mic .ox-cb-btn { background: var(--secondary); box-shadow: 0 0 0 4px rgba(52, 156, 92, .3); }
+.ox-cb.is-hand .ox-cb-btn { background: var(--color-accent); color: var(--primary); }
+.ox-cb:hover .ox-cb-btn { transform: translateY(-3px); }
+.js .ox-intro-copy.is-in .ox-cb.is-hand .ox-cb-btn svg { animation: oxWave 1.2s ease-in-out .9s 2; transform-origin: 50% 90%; }
+@keyframes oxWave { 0%, 100% { transform: rotate(0); } 25% { transform: rotate(-14deg); } 75% { transform: rotate(12deg); } }
+.ox-more { display: inline-flex; align-items: center; gap: 8px; margin-top: 22px; font-family: var(--font-head); font-weight: 600; font-size: 14px; color: var(--primary); }
+.ox-more svg { width: 16px; height: 16px; transition: transform .3s var(--ease); }
+.ox-more:hover { color: var(--secondary); }
+.ox-more:hover svg { transform: translateY(3px); }
+
 .ox-collage { position: relative; padding: 0 70px 58px 46px; }
 .ox-main { position: relative; z-index: 1; }
 .ox-main .ox-frame { --ar: 5 / 4; border-radius: 28px; box-shadow: 0 0 0 8px #fff, var(--shadow); }
@@ -55,7 +73,12 @@
   font-family: var(--font-head); font-weight: 600; font-size: 12.5px; line-height: 1; box-shadow: 0 8px 20px rgba(3, 86, 67, .14); }
 .ox-tag svg { width: 16px; height: 16px; color: var(--secondary); }
 .ox-tag-live { left: 18px; top: 18px; padding-left: 12px; }
-.ox-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--color-accent); box-shadow: 0 0 0 3px rgba(255, 192, 0, .28); }
+.ox-dot { position: relative; width: 8px; height: 8px; border-radius: 50%; background: #E53935; } /* red = live */
+.ox-dot::after { content: ""; position: absolute; inset: 0; border-radius: 50%; background: #E53935; }
+.js .ox-dot { animation: oxBlink 1.4s ease-in-out infinite; }
+.js .ox-dot::after { animation: oxPing 1.4s ease-out infinite; }
+@keyframes oxBlink { 0%, 100% { opacity: 1; } 50% { opacity: .25; } }
+@keyframes oxPing { 0% { transform: scale(1); opacity: .55; } 80%, 100% { transform: scale(2.8); opacity: 0; } }
 .ox-side-a .ox-tag { left: 50%; bottom: -15px; transform: translateX(-50%); }
 .ox-side-b .ox-tag { right: -6px; bottom: -15px; }
 
@@ -154,6 +177,10 @@
   .ox-side-a { width: 40%; }
   .ox-side-b { width: 30%; top: 26px; }
   .ox-tag { font-size: 11.5px; padding: 6px 11px 6px 8px; }
+  .ox-callbar { display: flex; gap: 2px; padding: 8px; }
+  .ox-cb { flex: 1 1 0; width: auto; }
+  .ox-cb-btn { width: 38px; height: 38px; }
+  .ox-cb-text { font-size: 10.5px; }
   .ox-tag-live { left: 12px; top: 12px; }
   .ox-side-b .ox-tag { right: 0; }
   .ox-journey { margin-top: 52px; padding: 30px 18px 32px; border-radius: 24px; }

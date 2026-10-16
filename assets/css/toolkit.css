@@ -6,8 +6,8 @@
    ========================================================= */
 
 .tk { position: relative; overflow: hidden; padding: 44px 0 40px; background: var(--light); }
-.tk-inner { position: relative; display: grid; grid-template-columns: minmax(0, .92fr) minmax(0, 1.08fr);
-  grid-template-areas: "copy visual" "legend visual"; column-gap: 48px; align-items: center; }
+.tk-inner { position: relative; display: grid; grid-template-columns: minmax(0, 520px) minmax(0, 450px); justify-content: center;
+  grid-template-areas: "copy visual" "legend visual"; column-gap: 72px; align-items: center; }
 .tk-copy { grid-area: copy; align-self: end; }
 .tk-legend { grid-area: legend; align-self: start; }
 .tk-visual { grid-area: visual; position: relative; padding: 0 0 26px; }

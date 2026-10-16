@@ -1060,3 +1060,15 @@ a.info-card.is-link:hover .info-go { background: var(--primary); border-color: v
 .sg-btn { margin-top: 22px; }
 .sg-btn:focus-visible { outline: 3px solid var(--color-accent); outline-offset: 3px; }
 .sg-open body { overflow: hidden; }
+
+/* pricing cards rise in one after another (more specific than the compact size rules) */
+.js .price-card[data-reveal] { opacity: 0; transform: translateY(60px) scale(.95);
+  transition: opacity .8s var(--ease) var(--d, 0ms), transform 1s cubic-bezier(.22, 1, .36, 1) var(--d, 0ms), box-shadow .45s var(--ease), border-color .45s; }
+.js .price-card[data-reveal].is-in { opacity: 1; transform: none; }
+
+/* ---------- reading progress bar (added by main.js on every page) ---------- */
+.scroll-progress { position: fixed; left: 0; top: 0; z-index: 80; width: 100%; height: 3px; background: var(--primary);
+  transform: scaleX(0); transform-origin: left center; pointer-events: none; will-change: transform; }
+@media (prefers-reduced-motion: reduce) {
+  .js .price-card[data-reveal] { opacity: 1; transform: none; }
+}
