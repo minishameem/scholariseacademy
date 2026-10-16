@@ -54,6 +54,9 @@
   .js .page-home main .hero-shape.s1 { animation: float 6s ease-in-out infinite; }
   .page-home main .philosophy { padding: 57.6px 0 56px; }
   .page-home main .philosophy-eyebrow { text-align: center; font-family: var(--font-body); font-weight: 400; font-size: 22.64px; line-height: 1.2; color: var(--primary); letter-spacing: .01em; }
+  .page-home main .philosophy-panel { position: relative; padding: 48px 51.2px 52.8px; border-radius: 32px; background: var(--light); }
+  .page-home main .philosophy-heading { text-align: center; }
+  .page-home main .philosophy-panel .philosophy-box { background: #fff; }
   .page-home main .philosophy-body { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 437.6px); column-gap: 25.6px; align-items: start; margin-top: 44.8px; }
   .page-home main .philosophy-media { position: relative; margin-top: 14.4px; }
   .page-home main .philosophy-img { width: 100%; height: auto; }
@@ -322,6 +325,7 @@
   @media (max-width: 1099px) {
     .page-home main .faq-bubble { display: none; }
   }
+  .page-home main .phil-tile img, .page-home main .ip-frame img { -webkit-user-drag: none; user-select: none; -webkit-user-select: none; }
   .page-home main .container { max-width: 1200px; padding: 0 24px; }
   .page-home main .hero-visual { width: min(58.68%, 681px); bottom: 28px; }
   .page-home main .hero-inner { min-height: 0; }
