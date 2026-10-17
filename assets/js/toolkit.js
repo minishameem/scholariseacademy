@@ -15,6 +15,7 @@
 
    Logo sources (all free to use; the brand names belong to their owners):
      zoom.svg, google-meet.svg   gilbarbara/logos (CC0)
+     wordwall.webp, baamboozle.webp   supplied by Scholarise
      canva.svg          Devicon (MIT)
      kahoot.svg, google-slides.svg, google-forms.svg
                         Simple Icons (CC0), in each brand's own colour
@@ -23,12 +24,12 @@
 window.SCHOLARISE_TOOLKIT = [
   { name: 'Zoom',             note: 'Live classes',               logo: 'assets/images/tools/zoom.svg', wide: true },
   { name: 'Canva',            note: 'Visual learning materials',  logo: 'assets/images/tools/canva.svg' },
-  { name: 'Wordwall',         note: 'Interactive practice',       logo: '', mark: 'Ww' },
+  { name: 'Wordwall',         note: 'Interactive practice',       logo: 'assets/images/tools/wordwall.webp' },
   { name: 'Kahoot!',          note: 'Quizzes and review',         logo: 'assets/images/tools/kahoot.svg' },
   { name: 'Google Slides',    note: 'Lesson presentation',        logo: 'assets/images/tools/google-slides.svg' },
   { name: 'Google Forms',     note: 'Assessment and feedback',    logo: 'assets/images/tools/google-forms.svg' },
   { name: 'Google Meet',      note: 'Lessons and parent meetings', logo: 'assets/images/tools/google-meet.svg' },
-  { name: 'Baamboozle',       note: 'Classroom games',            logo: '', mark: 'Bz' }
+  { name: 'Baamboozle',       note: 'Classroom games',            logo: 'assets/images/tools/baamboozle.webp' }
 ];
 
 /* ---- no need to edit below this line ---- */
