@@ -114,9 +114,9 @@
 .ox-in-3 .ox-in-media::before { inset: -22px -22px 22px 22px; background: var(--color-accent-soft); }
 .ox-in-1 { grid-column: 1 / -1; display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); column-gap: 56px; align-items: center; }
 .ox-in-1 .ox-frame { --ar: 3 / 2; }
-.ox-in-2 { grid-column: 1 / span 6; position: relative; left: 5px; margin-top: 5px; } /* nudged 5px in and 5px down */
+.ox-in-2 { grid-column: 1 / span 6; position: relative; left: 10px; margin-top: 15px; } /* nudged 10px in and 15px down */
 .ox-in-2 .ox-frame { --ar: 3 / 2; }
-.ox-in-3 { grid-column: 8 / span 5; position: relative; left: -5px; margin-top: 5px; } /* 5px in and 5px down; photo top still lines up with the Practise photo */
+.ox-in-3 { grid-column: 8 / span 5; position: relative; left: -10px; margin-top: 15px; } /* 10px in and 15px down; photo top still lines up with the Practise photo */
 .ox-in-3 .ox-frame { --ar: 4 / 3; }
 .ox-in-2 .ox-in-text, .ox-in-3 .ox-in-text { margin-top: 44px; }
 /* Practise / Guidance: the block (box width) is centred under its photo; inside it,
@@ -196,7 +196,7 @@
   .ox-track, .ox-step::after { display: none; }
   .ox-inside { margin-top: 68px; }
   .ox-in-1 { column-gap: 32px; }
-  .ox-in-3 { grid-column: 7 / span 6; margin-top: 5px; }
+  .ox-in-3 { grid-column: 7 / span 6; margin-top: 15px; }
   .ox-close { margin-top: 68px; }
 }
 
