@@ -24,7 +24,8 @@ window.SCHOLARISE_TESTIMONIALS = [
   { id: 't5', placeholder: true, text: 'Parent testimonial will appear here.', attribution: 'Parent of a Scholarise Learner' },
   { id: 't6', placeholder: true, text: 'Parent testimonial will appear here.', attribution: 'Parent of a Scholarise Learner' },
   { id: 't7', placeholder: true, text: 'Parent testimonial will appear here.', attribution: 'Parent of a Scholarise Learner' },
-  { id: 't8', placeholder: true, text: 'Parent testimonial will appear here.', attribution: 'Parent of a Scholarise Learner' }
+  { id: 't8', placeholder: true, text: 'Parent testimonial will appear here.', attribution: 'Parent of a Scholarise Learner' },
+  { id: 't9', placeholder: true, text: 'Parent testimonial will appear here.', attribution: 'Parent of a Scholarise Learner' }
 ];
 
 /* ---- no need to edit below this line ---- */

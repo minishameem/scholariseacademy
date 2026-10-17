@@ -87,6 +87,13 @@
   .pn-path { grid-area: path; width: 100%; margin: 0; }
   .pn-card { padding: 22px 20px 20px; }
   .pn-text p { font-size: 15px; }
+  .pn-stop { width: 12px; height: 12px; }
+  .pn-stop::after { inset: -4px; } /* tap areas must not overlap their neighbours */
+}
+@media (max-width: 374px) {
+  .pn-stop { width: 10px; height: 10px; border-width: 1.5px; }
+  .pn-stop::after { inset: -3px; }
+  .pn-arrow { width: 42px; height: 42px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
